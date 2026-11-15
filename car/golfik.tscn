@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://cv0acp52ynffg"]
 
 [ext_resource type="Script" uid="uid://dmo7vj4lkio4u" path="res://car/golfik.gd" id="1_wunr3"]
+[ext_resource type="Texture2D" uid="uid://s1eld453e87f" path="res://assets/golfik.png" id="2_fartf"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fh0uv"]
 resource_name = "Material.001"
@@ -42,6 +43,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_dvork")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_be1cq"]
+albedo_texture = ExtResource("2_fartf")
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_cd83b"]
 size = Vector3(6.6138306, 2.5879173, 2.8917236)
 
@@ -77,6 +81,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_m4cda")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j8t3y"]
+albedo_texture = ExtResource("2_fartf")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7b54d"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_hipkf"]
@@ -108,6 +115,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_hipkf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qyexg"]
+albedo_texture = ExtResource("2_fartf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5fdwx"]
 
@@ -141,6 +151,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_gxqxp")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfgqy"]
+albedo_texture = ExtResource("2_fartf")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_41e04"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6t8qc"]
@@ -173,11 +186,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_6t8qc")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svia4"]
+albedo_texture = ExtResource("2_fartf")
+
 [node name="golfik" type="VehicleBody3D" unique_id=1977507205]
 script = ExtResource("1_wunr3")
 
 [node name="body" type="MeshInstance3D" parent="." unique_id=1718515951]
 mesh = SubResource("ArrayMesh_1imsk")
+surface_material_override/0 = SubResource("StandardMaterial3D_be1cq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=304166247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009002686, -0.24310446, -0.0289917)
@@ -188,24 +205,27 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.27
 use_as_traction = true
 
 [node name="wheel back left" type="MeshInstance3D" parent="VehicleWheel3D" unique_id=1158418164]
-transform = Transform3D(-2.2656003e-08, -0.51830894, 0, 0.51830894, -2.2656003e-08, 0, 0, 0, 0.51830894, 0, 0, 0)
+transform = Transform3D(2.2656003e-08, 0.51830894, -4.5312007e-08, 0.51830894, -2.2656003e-08, 0, -1.9806508e-15, -4.5312007e-08, -0.51830894, 0, 0, 0)
 mesh = SubResource("ArrayMesh_7hpob")
+surface_material_override/0 = SubResource("StandardMaterial3D_j8t3y")
 
 [node name="VehicleWheel3D2" type="VehicleWheel3D" parent="." unique_id=965616969]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.2711697, -1.055446, -1.3227817)
 use_as_traction = true
 
 [node name="wheel back right" type="MeshInstance3D" parent="VehicleWheel3D2" unique_id=1433086951]
-transform = Transform3D(-2.2656003e-08, -0.51830894, 0, 0.51830894, -2.2656003e-08, 0, 0, 0, 0.51830894, 0, 0, 0)
+transform = Transform3D(2.2656003e-08, 0.51830894, -4.5312007e-08, 0.51830894, -2.2656003e-08, 0, -1.9806508e-15, -4.5312007e-08, -0.51830894, 0, 0, 0)
 mesh = SubResource("ArrayMesh_6ti6y")
+surface_material_override/0 = SubResource("StandardMaterial3D_qyexg")
 
 [node name="VehicleWheel3D3" type="VehicleWheel3D" parent="." unique_id=866085431]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -2.163292, -1.0554461, 1.3227814)
 use_as_steering = true
 
 [node name="wheel front left" type="MeshInstance3D" parent="VehicleWheel3D3" unique_id=691832222]
-transform = Transform3D(-2.2656003e-08, -0.51830894, 0, 0.51830894, -2.2656003e-08, 0, 0, 0, 0.51830894, 0, 0, 0)
+transform = Transform3D(2.2656003e-08, 0.51830894, -4.5312007e-08, 0.51830894, -2.2656003e-08, 0, -1.9806508e-15, -4.5312007e-08, -0.51830894, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ors0h")
+surface_material_override/0 = SubResource("StandardMaterial3D_tfgqy")
 
 [node name="VehicleWheel3D4" type="VehicleWheel3D" parent="." unique_id=647673798]
 transform = Transform3D(-4.371139e-08, 0, -0.99999994, 0, 0.99999994, 0, 1, 0, -4.3711385e-08, -2.163292, -1.055446, -1.3227817)
@@ -214,6 +234,7 @@ use_as_steering = true
 [node name="wheel front right" type="MeshInstance3D" parent="VehicleWheel3D4" unique_id=1303330926]
 transform = Transform3D(-2.2656003e-08, 0.51830894, 0, -0.51830894, -2.2656003e-08, 0, 0, 0, 0.51830894, 0, 0, 0)
 mesh = SubResource("ArrayMesh_j6ev6")
+surface_material_override/0 = SubResource("StandardMaterial3D_svia4")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=265267793]
 transform = Transform3D(0.6171341, -0.2691213, 0.73940474, 1.302701e-15, 0.9396927, 0.34202012, -0.786858, -0.21107228, 0.57991636, 3.811994, 1.7227943, 4.247995)

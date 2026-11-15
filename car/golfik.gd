@@ -1,7 +1,7 @@
 extends VehicleBody3D
 
 @export var steer = 0.9
-@export var power = 400
+@export var power = 3000
 
 #Called when the node enters the scene tree for the first time.
 func _ready() -> void:
