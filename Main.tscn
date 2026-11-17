@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bflkgb8q4ab2k"]
+
+[ext_resource type="PackedScene" uid="uid://cv0acp52ynffg" path="res://car/golfik.tscn" id="1_glv2v"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_0mkq6"]
+frequency = 0.0281
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2s56o"]
+noise = SubResource("FastNoiseLite_0mkq6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_anosd"]
+transparency = 1
+albedo_color = Color(1, 0.8295931, 0.42373294, 1)
+albedo_texture = SubResource("NoiseTexture2D_2s56o")
+
+[node name="Main" type="Node3D" unique_id=1897321323]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1476207875]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1388237527]
+handle_input_locally = false
+scaling_3d_mode = 5
+anisotropic_filtering_level = 0
+fsr_sharpness = 0.0
+canvas_item_default_texture_filter = 0
+sdf_oversize = 0
+positional_shadow_atlas_size = 128
+size = Vector2i(640, 480)
+render_target_update_mode = 4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1870302429]
+transform = Transform3D(1, 0, 0, 0, -0.5274117, 0.84960985, 0, -0.84960985, -0.5274117, 0, 8.394621, -35.631977)
+
+[node name="golfik" parent="SubViewportContainer/SubViewport" unique_id=1977507205 node_paths=PackedStringArray("layer1", "layer2", "layer3") instance=ExtResource("1_glv2v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2249784, 0)
+layer1 = NodePath("../Layer1")
+layer2 = NodePath("../Layer2")
+layer3 = NodePath("../Layer3")
+
+[node name="Layer1" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=69541661]
+
+[node name="Map" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer1" unique_id=50626467]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1003418, -0.4995, 1.4568024)
+use_collision = true
+size = Vector3(448.47852, 0.001, 437.9297)
+material = SubResource("StandardMaterial3D_anosd")
+
+[node name="Layer2" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1333433397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.707375, 0)
+
+[node name="Map2" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer2" unique_id=1620058070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1003418, -2.8201787, 1.4568024)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+size = Vector3(448.47852, 0.001, 437.9297)
+material = SubResource("StandardMaterial3D_anosd")
+
+[node name="Layer3" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=231094992]
+
+[node name="Map3" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1637084338]
+transform = Transform3D(1, 0, 0, 0, 0.98951876, 0.14440477, 0, -0.14440477, 0.98951876, 1.1003418, -0.4995, 159.15457)
+use_collision = true
+collision_layer = 4
+collision_mask = 4
+size = Vector3(448.47852, 0.001, 437.9297)
+material = SubResource("StandardMaterial3D_anosd")
