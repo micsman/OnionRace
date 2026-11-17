@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s1eld453e87f"
-path.s3tc="res://.godot/imported/golfik.png-5dfdba2617aaf874ea9e5c63ea809c0b.s3tc.ctex"
+uid="uid://dbxmm2sxetrhj"
+path.s3tc="res://.godot/imported/golfik_golfik.png-5961026f7f7d7600e6d64127e21dd984.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "44f356e2a18f14636362a8f477b7dc0f"
+}
 
 [deps]
 
-source_file="res://assets/golfik.png"
-dest_files=["res://.godot/imported/golfik.png-5dfdba2617aaf874ea9e5c63ea809c0b.s3tc.ctex"]
+source_file="res://assets/golfik_golfik.png"
+dest_files=["res://.godot/imported/golfik_golfik.png-5961026f7f7d7600e6d64127e21dd984.s3tc.ctex"]
 
 [params]
 
