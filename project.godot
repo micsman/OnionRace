@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="OnionRace"
-run/main_scene="uid://bflkgb8q4ab2k"
+run/main_scene="res://Main/scenes/opening/opening.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[clean_copy_examples]
+
+examples_paths=Array[String](["res://addons/maaacks_game_template/examples/"])
+copy_path="res://Menu/"
 
 [display]
 
@@ -22,6 +27,14 @@ window/size/viewport_height=480
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/maaacks_game_template/plugin.cfg", "res://addons/plugin_updater/plugin.cfg")
+
+[gui]
+
+theme/custom="res://Main/resources/themes/gravity.tres"
 
 [input]
 
@@ -60,9 +73,28 @@ brake={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/maaacks_game_template/base/translations/menus_translations.en.translation", "res://addons/maaacks_game_template/base/translations/menus_translations.fr.translation")
+
+[maaacks_game_template]
+
+disable_install_wizard=true
+main_menu_scene_path="res://Menu/scenes/menus/main_menu/main_menu.tscn"
+game_scene_path="res://Main.tscn"
+ending_scene_path="res://Menu/scenes/end_credits/end_credits.tscn"
+copy_path="res://Menu/"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[plugin_updater]
+
+plugins={
+"res://addons/maaacks_game_template/": "https://github.com/Maaack/Godot-Minimal-Game-Template",
+"res://addons/plugin_updater/": "https://github.com/Maaack/Godot-Plugin-Updater"
+}
 
 [rendering]
 
