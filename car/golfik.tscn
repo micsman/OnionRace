@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dmo7vj4lkio4u" path="res://car/golfik.gd" id="1_wunr3"]
 [ext_resource type="Texture2D" uid="uid://dbxmm2sxetrhj" path="res://assets/golfik_golfik.png" id="2_2s56o"]
+[ext_resource type="Script" uid="uid://dwujxvrw3v7fp" path="res://Scripts/follow_camera.gd" id="3_2s56o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fh0uv"]
 resource_name = "golfic_texture"
@@ -421,3 +422,18 @@ mesh = SubResource("ArrayMesh_j6ev6")
 
 [node name="wheel front right backface" type="MeshInstance3D" parent="VehicleWheel3D4/wheel front right" unique_id=1826621553]
 mesh = SubResource("ArrayMesh_hy38y")
+
+[node name="CameraBase" type="Node3D" parent="." unique_id=271730473]
+
+[node name="Camera3D" type="Camera3D" parent="CameraBase" unique_id=977565299]
+transform = Transform3D(-0.03664387, -0.37920132, 0.9245883, 0, 0.9252097, 0.37945616, -0.9993284, 0.013904742, -0.033903264, 6.03, 2.685, 0)
+script = ExtResource("3_2s56o")
+min_distance = 6.0
+max_distance = 8.0
+height = 3.5
+
+[node name="InteriorCameraPosition" type="Marker3D" parent="." unique_id=1116371841]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.8725956, 0.9, 0.3)
+
+[node name="TopDownCameraPosition" type="Marker3D" parent="." unique_id=1321003313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.777, 0)
