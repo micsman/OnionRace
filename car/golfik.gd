@@ -43,8 +43,6 @@ func _input(event: InputEvent) -> void:
 func switch_layer(new_layer: WorldLayer):
 	current_layer = new_layer
 	
-	collision_mask = 0
-	
 	match current_layer:
 		WorldLayer.LAYER_1:
 			set_collision_mask_value(1, true)
