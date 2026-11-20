@@ -421,6 +421,3 @@ mesh = SubResource("ArrayMesh_j6ev6")
 
 [node name="wheel front right backface" type="MeshInstance3D" parent="VehicleWheel3D4/wheel front right" unique_id=1826621553]
 mesh = SubResource("ArrayMesh_hy38y")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=265267793]
-transform = Transform3D(-4.371139e-08, -0.34202015, 0.9396927, 0, 0.9396927, 0.34202015, -1, 1.4950176e-08, -4.107527e-08, 5.398, 1.75, 0)

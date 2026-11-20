@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bflkgb8q4ab2k"]
 
 [ext_resource type="PackedScene" uid="uid://cv0acp52ynffg" path="res://car/golfik.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://dwujxvrw3v7fp" path="res://Scripts/follow_camera.gd" id="2_r0du0"]
 [ext_resource type="PackedScene" uid="uid://cplxlawbqo4ke" path="res://assets/map.glb" id="2_uu6xs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu6xs"]
@@ -37,13 +38,23 @@ render_target_update_mode = 4
 transform = Transform3D(1, 0, 0, 0, -0.5274117, 0.84960985, 0, -0.84960985, -0.5274117, 0, 8.394621, -35.631977)
 
 [node name="golfik" parent="SubViewportContainer/SubViewport" unique_id=1977507205 node_paths=PackedStringArray("layer1", "layer2", "layer3") instance=ExtResource("1_glv2v")]
-transform = Transform3D(-0.74166393, 0, 0.67077166, 0, 1, 0, -0.67077166, 0, -0.74166393, 0, 5.2249784, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2249784, 0)
 layer1 = NodePath("../Layer1")
 layer2 = NodePath("../Layer2")
 layer3 = NodePath("../Layer3")
 
+[node name="CameraBase" type="Node3D" parent="SubViewportContainer/SubViewport/golfik" unique_id=28416705]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport/golfik/CameraBase" unique_id=1954270034]
+transform = Transform3D(-0.03664387, -0.37920132, 0.9245883, 0, 0.9252097, 0.37945616, -0.9993284, 0.013904742, -0.033903264, 6.03, 2.685, 0)
+script = ExtResource("2_r0du0")
+min_distance = 6.0
+max_distance = 8.0
+angle_v_adjust = 4.0
+height = 3.5
+
 [node name="map" parent="SubViewportContainer/SubViewport" unique_id=982667426 instance=ExtResource("2_uu6xs")]
-transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, -38.65329, 0, 36.275223)
+transform = Transform3D(25.000002, 0, 0, 0, 25, 0, 0, 0, 25.000002, -38.65329, 0, 36.275223)
 
 [node name="Layer1" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=69541661]
 
