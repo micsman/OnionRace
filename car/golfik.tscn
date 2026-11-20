@@ -423,4 +423,4 @@ mesh = SubResource("ArrayMesh_j6ev6")
 mesh = SubResource("ArrayMesh_hy38y")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=265267793]
-transform = Transform3D(0.6263966, -0.26660624, 0.73249465, -9.8669135e-09, 0.9396926, 0.34202012, -0.7795046, -0.21424025, 0.58862025, 4.508781, 1.2575078, 4.6711826)
+transform = Transform3D(-4.371139e-08, -0.34202015, 0.9396927, 0, 0.9396927, 0.34202015, -1, 1.4950176e-08, -4.107527e-08, 5.398, 1.75, 0)

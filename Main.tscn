@@ -3,6 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://cv0acp52ynffg" path="res://car/golfik.tscn" id="1_glv2v"]
 [ext_resource type="PackedScene" uid="uid://cplxlawbqo4ke" path="res://assets/map.glb" id="2_uu6xs"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu6xs"]
+transparency = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0du0"]
+transparency = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cm0pq"]
+transparency = 1
+
 [node name="Main" type="Node3D" unique_id=1897321323]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1476207875]
@@ -28,7 +37,7 @@ render_target_update_mode = 4
 transform = Transform3D(1, 0, 0, 0, -0.5274117, 0.84960985, 0, -0.84960985, -0.5274117, 0, 8.394621, -35.631977)
 
 [node name="golfik" parent="SubViewportContainer/SubViewport" unique_id=1977507205 node_paths=PackedStringArray("layer1", "layer2", "layer3") instance=ExtResource("1_glv2v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2249784, 0)
+transform = Transform3D(-0.74166393, 0, 0.67077166, 0, 1, 0, -0.67077166, 0, -0.74166393, 0, 5.2249784, 0)
 layer1 = NodePath("../Layer1")
 layer2 = NodePath("../Layer2")
 layer3 = NodePath("../Layer3")
@@ -38,7 +47,29 @@ transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, -38.65329, 0, 36.275223)
 
 [node name="Layer1" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=69541661]
 
+[node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer1" unique_id=37810338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.605711, 2.9983227, 13.158363)
+use_collision = true
+size = Vector3(8.918457, 6.524536, 1)
+material = SubResource("StandardMaterial3D_uu6xs")
+
 [node name="Layer2" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1333433397]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.707375, 0)
 
+[node name="CSGBox3D2" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer2" unique_id=397180340]
+transform = Transform3D(0.7148442, 0, 0.6992837, 0, 1, 0, -0.6992837, 0, 0.7148442, 32.063972, 14.463992, 51.928272)
+use_collision = true
+collision_layer = 2
+collision_mask = 2
+size = Vector3(8.918457, 6.524536, 1)
+material = SubResource("StandardMaterial3D_r0du0")
+
 [node name="Layer3" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=231094992]
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer3" unique_id=827464282]
+transform = Transform3D(0.62127346, 0, 0.78359395, 0, 1, 0, -0.78359395, 0, 0.62127346, 79.950294, 1.7566175, 91.19622)
+use_collision = true
+collision_layer = 4
+collision_mask = 4
+size = Vector3(13.899658, 6.524536, 1)
+material = SubResource("StandardMaterial3D_cm0pq")

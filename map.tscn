@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://tki5ufo0drra"]
+
+[ext_resource type="PackedScene" uid="uid://cplxlawbqo4ke" path="res://assets/map.glb" id="1_c7s6e"]
+
+[node name="map" unique_id=507166813 instance=ExtResource("1_c7s6e")]
