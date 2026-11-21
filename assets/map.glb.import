@@ -41,7 +41,12 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:Plane": {
+"PATH:map_terrain": {
+"generate/physics": true,
+"physics/layer": 8,
+"physics/mask": 8
+},
+"PATH:map_tour": {
 "generate/physics": true,
 "physics/layer": 8,
 "physics/mask": 8

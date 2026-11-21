@@ -427,6 +427,8 @@ mesh = SubResource("ArrayMesh_hy38y")
 
 [node name="Camera3D" type="Camera3D" parent="CameraBase" unique_id=977565299]
 transform = Transform3D(-0.03664387, -0.37920132, 0.9245883, 0, 0.9252097, 0.37945616, -0.9993284, 0.013904742, -0.033903264, 6.03, 2.685, 0)
+fov = 60.0
+far = 333.0
 script = ExtResource("3_2s56o")
 min_distance = 6.0
 max_distance = 8.0
