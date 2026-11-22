@@ -34,7 +34,8 @@ size = Vector2i(640, 480)
 render_target_update_mode = 4
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1870302429]
-transform = Transform3D(1, 0, 0, 0, -0.5274117, 0.84960985, 0, -0.84960985, -0.5274117, 0, 8.394621, -35.631977)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+light_specular = 0.5
 
 [node name="golfik" parent="SubViewportContainer/SubViewport" unique_id=1977507205 node_paths=PackedStringArray("layer1", "layer2", "layer3") instance=ExtResource("1_glv2v")]
 transform = Transform3D(-0.99908483, 0.042769853, -8.7342784e-08, 0.04276985, 0.99908495, 3.7390593e-09, 8.742277e-08, 0, -1, -225.21198, 62.621128, -345.44254)
