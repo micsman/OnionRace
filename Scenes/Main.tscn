@@ -15,8 +15,12 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
 size = Vector3(2317.4866, 17.197166, 1870.1924)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2w5on"]
+size = Vector3(7.1523438, 10.382935, 36.22168)
+
 [node name="Main" type="Node3D" unique_id=1897321323 node_paths=PackedStringArray("layer1", "layer2", "layer3", "car")]
 script = ExtResource("1_kln2b")
+ending_credits_path = "uid://diii0m3d111aj"
 layer1 = NodePath("SubViewportContainer/SubViewport/Layer1")
 layer2 = NodePath("SubViewportContainer/SubViewport/Layer2")
 layer3 = NodePath("SubViewportContainer/SubViewport/Layer3")
@@ -45,9 +49,8 @@ render_target_update_mode = 4
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_specular = 0.5
 
-[node name="golfik" parent="SubViewportContainer/SubViewport" unique_id=1977507205 instance=ExtResource("1_glv2v")]
+[node name="golfik" parent="SubViewportContainer/SubViewport" unique_id=1977507205 groups=["player"] instance=ExtResource("1_glv2v")]
 transform = Transform3D(-0.99908483, 0.042769853, -8.7342784e-08, 0.04276985, 0.99908495, 3.7390593e-09, 8.742277e-08, 0, -1, -225.21198, 62.621128, -345.44254)
-steer = 0.9
 
 [node name="LevelGroup" type="Node" parent="SubViewportContainer/SubViewport" unique_id=821082657]
 
@@ -400,4 +403,12 @@ debug_color = Color(0.99215686, 0.38039216, 1, 1)
 script = ExtResource("10_bmxlf")
 pause_menu_packed = ExtResource("11_4kpch")
 
+[node name="FinishLine" type="Area3D" parent="." unique_id=1383985621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -258.6082, 58.42482, -344.3096)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FinishLine" unique_id=277352604]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.6914673, 0)
+shape = SubResource("BoxShape3D_2w5on")
+
 [connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
+[connection signal="body_entered" from="FinishLine" to="." method="_on_finish_line_body_entered"]

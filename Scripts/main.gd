@@ -10,6 +10,7 @@ var wall_1: StandardMaterial3D
 var wall_2: StandardMaterial3D
 var wall_3: StandardMaterial3D
 
+@export_file("*.tscn") var ending_credits_path: String
 @export var layer1: Node3D
 @export var layer2: Node3D
 @export var layer3: Node3D
@@ -20,7 +21,6 @@ enum WorldLayer {LAYER_1, LAYER_2, LAYER_3}
 
 const ALPHA_ACTIVE: float = 1.0
 const ALPHA_INACTIVE: float = 0.25
-
 
 func _ready() -> void:
 	shared_mat = load(mat_path) as StandardMaterial3D
@@ -112,3 +112,8 @@ func switch_layer(new_layer: WorldLayer):
 
 func _on_deathzone_body_entered(_body: Node3D) -> void:
 	get_tree().call_deferred("reload_current_scene")
+
+
+func _on_finish_line_body_entered(body: Node3D) -> void:
+	get_tree().paused = false
+	get_tree().call_deferred("change_scene_to_file", ending_credits_path)
