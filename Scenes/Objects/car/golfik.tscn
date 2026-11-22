@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://cv0acp52ynffg"]
 
-[ext_resource type="Script" uid="uid://dmo7vj4lkio4u" path="res://car/golfik.gd" id="1_wunr3"]
+[ext_resource type="Script" uid="uid://dmo7vj4lkio4u" path="res://Scenes/Objects/car/golfik.gd" id="1_wunr3"]
 [ext_resource type="Texture2D" uid="uid://dbxmm2sxetrhj" path="res://assets/golfik_golfik.png" id="2_2s56o"]
 [ext_resource type="Script" uid="uid://dwujxvrw3v7fp" path="res://Scripts/follow_camera.gd" id="3_2s56o"]
 

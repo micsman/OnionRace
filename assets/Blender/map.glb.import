@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cqhb60trrscjo"
-path="res://.godot/imported/3D_glasses.glb-56b7ae3cce9dcf7a9fc71def20d85e2b.scn"
+uid="uid://cplxlawbqo4ke"
+path="res://.godot/imported/map.glb-33538aaed351c1d63f6c1923fe0bcd59.scn"
 
 [deps]
 
-source_file="res://assets/3D_glasses.glb"
-dest_files=["res://.godot/imported/3D_glasses.glb-56b7ae3cce9dcf7a9fc71def20d85e2b.scn"]
+source_file="res://assets/Blender/map.glb"
+dest_files=["res://.godot/imported/map.glb-33538aaed351c1d63f6c1923fe0bcd59.scn"]
 
 [params]
 
@@ -39,7 +39,25 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:decorations": {
+"generate/physics": true,
+"physics/layer": 8,
+"physics/mask": 8
+},
+"PATH:road": {
+"generate/physics": true,
+"physics/layer": 8,
+"physics/mask": 8
+},
+"PATH:terrain": {
+"generate/physics": true,
+"physics/layer": 8,
+"physics/mask": 8
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

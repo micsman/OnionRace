@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://coo2gg151tsr3" path="res://Menu/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_0ic5h"]
 [ext_resource type="PackedScene" uid="uid://2qwvdfambjkc" path="res://Menu/scenes/windows/main_menu_options_window.tscn" id="3_wi2rp"]
 [ext_resource type="PackedScene" uid="uid://dy7lxqbnk5a1d" path="res://Menu/scenes/windows/main_menu_credits_window.tscn" id="4_utvf7"]
-[ext_resource type="PackedScene" uid="uid://df8wswf00e2nd" path="res://Scenes/menu_background.tscn" id="5_0ic5h"]
+[ext_resource type="PackedScene" uid="uid://df8wswf00e2nd" path="res://Scenes/Menu/menu_background.tscn" id="5_0ic5h"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"

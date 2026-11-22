@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bsd0m7x2gocc7"
-path="res://.godot/imported/golfik.glb-fe7e470edf1135a6b0c531c400d93329.scn"
+uid="uid://cqhb60trrscjo"
+path="res://.godot/imported/3D_glasses.glb-acc8217803d8dc2343f21fdaec960a9e.scn"
 
 [deps]
 
-source_file="res://assets/golfik.glb"
-dest_files=["res://.godot/imported/golfik.glb-fe7e470edf1135a6b0c531c400d93329.scn"]
+source_file="res://assets/Blender/3D_glasses.glb"
+dest_files=["res://.godot/imported/3D_glasses.glb-acc8217803d8dc2343f21fdaec960a9e.scn"]
 
 [params]
 

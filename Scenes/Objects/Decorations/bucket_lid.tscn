@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dpb87ur7xiec1"]
+
+[ext_resource type="PackedScene" uid="uid://df6e6to8st8b6" path="res://assets/Blender/bucket_lid.glb" id="1_vxwkg"]
+
+[node name="bucket_lid" unique_id=1904638354 instance=ExtResource("1_vxwkg")]

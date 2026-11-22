@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c385betyy2xh"]
+
+[ext_resource type="PackedScene" uid="uid://cqhb60trrscjo" path="res://assets/Blender/3D_glasses.glb" id="1_b6ah6"]
+
+[node name="3D_glasses" unique_id=685665144 instance=ExtResource("1_b6ah6")]

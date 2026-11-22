@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://df8wswf00e2nd"]
 
-[ext_resource type="PackedScene" uid="uid://bsd0m7x2gocc7" path="res://assets/golfik.glb" id="1_6e1g0"]
-[ext_resource type="Script" uid="uid://dwb752ii1xqh5" path="res://Scripts/spin_menu_backroung.gd" id="1_ls5x7"]
-[ext_resource type="PackedScene" uid="uid://df6e6to8st8b6" path="res://assets/bucket.glb" id="3_3nm2m"]
+[ext_resource type="Script" uid="uid://dwb752ii1xqh5" path="res://Scripts/spin_menu_backroung.gd" id="1_pnre7"]
+[ext_resource type="PackedScene" uid="uid://bsd0m7x2gocc7" path="res://assets/Blender/golfik.glb" id="2_xhlhw"]
+[ext_resource type="PackedScene" uid="uid://dpb87ur7xiec1" path="res://Scenes/Objects/Decorations/bucket_lid.tscn" id="3_xhlhw"]
+[ext_resource type="PackedScene" uid="uid://crfth66x3viu0" path="res://Scenes/Objects/Decorations/bucket.tscn" id="4_oh1vg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1pn2r"]
 albedo_color = Color(0, 0, 0, 1)
@@ -17,10 +18,10 @@ fov = 69.3
 
 [node name="Spin" type="Node3D" parent="." unique_id=1996874951]
 transform = Transform3D(0.6328943, 0.16834645, -0.011368703, -0.16859777, 0.62921554, -0.06846614, -0.00667583, 0.06908178, 0.65131265, 0, 0, 0)
-script = ExtResource("1_ls5x7")
+script = ExtResource("1_pnre7")
 rotation_speed = 20.0
 
-[node name="golfik" parent="Spin" unique_id=885258063 instance=ExtResource("1_6e1g0")]
+[node name="golfik" parent="Spin" unique_id=885258063 instance=ExtResource("2_xhlhw")]
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="Spin" unique_id=940709160]
 transform = Transform3D(1, -7.1013346e-09, 8.381903e-09, 9.895302e-09, 1, 1.4901161e-08, -9.313226e-10, 2.4586916e-07, 1, 2.37301e-06, -37.791836, 0)
@@ -28,14 +29,14 @@ radius = 4.1342773
 height = 72.38379
 sides = 12
 
-[node name="bucket" parent="Spin" unique_id=23243984 instance=ExtResource("3_3nm2m")]
-transform = Transform3D(0.23500001, -5.820766e-11, 6.9849193e-10, 1.48429535e-08, 0.235, -3.7252903e-09, -9.313226e-10, 0, 0.23500003, -0.97843367, -1.3494403, 2.8908906)
+[node name="bucket_lid" parent="Spin" unique_id=1904638354 instance=ExtResource("3_xhlhw")]
+transform = Transform3D(0.23500001, -2.325396e-09, 2.1886143e-10, 2.325396e-09, 0.235, -5.777926e-08, -2.1886085e-10, 5.7779253e-08, 0.23500003, -0.97843367, -1.3494403, 2.8908906)
 
-[node name="bucket2" parent="Spin" unique_id=199792603 instance=ExtResource("3_3nm2m")]
-transform = Transform3D(0.1874009, -5.820766e-11, -0.14179532, 1.4831164e-08, 0.235, -3.760412e-09, 0.1417953, 0, 0.18740092, -0.06314051, -1.3494405, 2.396922)
+[node name="bucket" parent="Spin" unique_id=1943836281 instance=ExtResource("4_oh1vg")]
+transform = Transform3D(0.18740092, -1.1848312e-08, -0.14179532, 1.4831164e-08, 0.235, -3.5121683e-11, 0.14179532, -8.920882e-09, 0.18740092, -0.06314051, -1.3494405, 2.396922)
 
-[node name="bucket3" parent="Spin" unique_id=1211109182 instance=ExtResource("3_3nm2m")]
-transform = Transform3D(0.18327947, -0.129537, 0.069669314, 0.0854086, 0.003107006, -0.21890804, 0.11974562, 0.19604976, 0.049502227, 0.7317671, 1.1533204, 0.09943526)
+[node name="bucket2" parent="Spin" unique_id=1961775655 instance=ExtResource("4_oh1vg")]
+transform = Transform3D(0.18327947, -0.12953699, 0.06966932, 0.08540862, 0.0031070185, -0.21890804, 0.11974561, 0.1960498, 0.049502242, 0.7317671, 1.1533204, 0.09943526)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=966323017]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.123291, 0)

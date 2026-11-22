@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://df6e6to8st8b6"
-path="res://.godot/imported/bucket.glb-2dff90c671941060454988c3b3a04ad9.scn"
+uid="uid://rbq75fcv5xvd"
+path="res://.godot/imported/gazer.glb-1ecb561f366ea4eb4ba63b0f3f096330.scn"
 
 [deps]
 
-source_file="res://assets/bucket.glb"
-dest_files=["res://.godot/imported/bucket.glb-2dff90c671941060454988c3b3a04ad9.scn"]
+source_file="res://assets/Blender/gazer.glb"
+dest_files=["res://.godot/imported/gazer.glb-1ecb561f366ea4eb4ba63b0f3f096330.scn"]
 
 [params]
 

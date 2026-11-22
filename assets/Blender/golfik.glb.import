@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cplxlawbqo4ke"
-path="res://.godot/imported/map.glb-35d47ad72c234cee36013daa6414ef9d.scn"
+uid="uid://bsd0m7x2gocc7"
+path="res://.godot/imported/golfik.glb-76f7da4347081fe19c1372f19d74a843.scn"
 
 [deps]
 
-source_file="res://assets/map.glb"
-dest_files=["res://.godot/imported/map.glb-35d47ad72c234cee36013daa6414ef9d.scn"]
+source_file="res://assets/Blender/golfik.glb"
+dest_files=["res://.godot/imported/golfik.glb-76f7da4347081fe19c1372f19d74a843.scn"]
 
 [params]
 
@@ -39,20 +39,7 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:map_terrain": {
-"generate/physics": true,
-"physics/layer": 8,
-"physics/mask": 8
-},
-"PATH:map_tour": {
-"generate/physics": true,
-"physics/layer": 8,
-"physics/mask": 8
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

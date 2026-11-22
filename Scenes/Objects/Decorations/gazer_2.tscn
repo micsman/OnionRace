@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bkvoj0fck3vaa"]
+
+[ext_resource type="PackedScene" uid="uid://rbq75fcv5xvd" path="res://assets/Blender/gazer.glb" id="1_kobju"]
+
+[node name="gazer2" unique_id=1439362083 instance=ExtResource("1_kobju")]
