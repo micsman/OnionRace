@@ -90,10 +90,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -245.87306, 95.78553, -361.15
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247.7205, 102.50519, -343.47803)
 
 [node name="obstacle51" parent="SubViewportContainer/SubViewport/Layer1" unique_id=256524366 instance=ExtResource("7_vy5pj")]
-transform = Transform3D(1, 0, 0, 0, -0.99930906, 0.03716772, 0, -0.03716772, -0.99930906, -244.29398, 66.31286, -350.49072)
+transform = Transform3D(1, 0, 0, 0, -0.99930906, 0.03716772, 0, -0.03716772, -0.99930906, -246.88008, 66.31286, -350.49072)
 
 [node name="obstacle52" parent="SubViewportContainer/SubViewport/Layer1" unique_id=310318528 instance=ExtResource("8_bmxlf")]
-transform = Transform3D(1, 0, 0, 0, -0.08495133, -0.9963851, 0, 0.9963851, -0.08495133, -243.61948, 70.71239, -337.6146)
+transform = Transform3D(1, 0, 0, 0, -0.08495133, -0.9963851, 0, 0.9963851, -0.08495133, -249.01457, 63.896378, -340.06686)
 
 [node name="obstacle13" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1823499674 instance=ExtResource("7_vy5pj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.182884, 56.87057, -349.189)
@@ -178,11 +178,20 @@ transform = Transform3D(1, 0, 0, 0, 0.8722083, -0.48913467, 0, 0.48913467, 0.872
 [node name="obstacle46" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1930948935 instance=ExtResource("9_4kpch")]
 transform = Transform3D(1, 0, 0, 0, -0.03468037, 0.99939847, 0, -0.99939847, -0.03468037, -243.50835, 83.34385, -319.92596)
 
+[node name="obstacle50" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1875517325 instance=ExtResource("9_4kpch")]
+transform = Transform3D(0.99999374, 0.002731274, -0.0022484683, 0.0024168214, -0.063284464, 0.9979926, 0.0025834942, -0.9979918, -0.06329067, -241.5256, 65.66379, -353.83066)
+
 [node name="obstacle47" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1820864414 instance=ExtResource("8_bmxlf")]
 transform = Transform3D(1, 0, 0, 0, 0.08627828, -0.9962711, 0, 0.9962711, 0.08627828, -245.8617, 82.28559, -371.223)
 
+[node name="obstacle49" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1206161731 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 0.08627828, -0.9962711, 0, 0.9962711, 0.08627828, -249.51, 62.695778, -352.4107)
+
 [node name="obstacle54" parent="SubViewportContainer/SubViewport/Layer3" unique_id=189290246 instance=ExtResource("7_vy5pj")]
 transform = Transform3D(1, 0, 0, 0, -0.8272151, 0.5618854, 0, -0.5618854, -0.8272151, -245.97374, 85.18914, -334.60687)
+
+[node name="obstacle57" parent="SubViewportContainer/SubViewport/Layer3" unique_id=2143356473 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, -0.8272151, 0.5618854, 0, -0.5618854, -0.8272151, -245.97374, 64.2304, -338.8797)
 
 [node name="obstacle12" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1140118951 instance=ExtResource("7_vy5pj")]
 transform = Transform3D(0.9261248, 0, 0.3772172, 0, 1, 0, -0.3772172, 0, 0.9261248, 243.1664, 49.977657, -91.959305)
@@ -213,6 +222,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -426.99594, 76.81301, -352.83
 
 [node name="obstacle53" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1987668819 instance=ExtResource("9_4kpch")]
 transform = Transform3D(1, 0, 0, 0, 0.7788635, 0.6271937, 0, -0.6271937, 0.7788635, -245.34195, 78.72066, -358.32666)
+
+[node name="obstacle56" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1235580301 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, 0.7788635, 0.6271937, 0, -0.6271937, 0.7788635, -241.94685, 63.837738, -340.94095)
 
 [node name="obstacle55" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1067963518 instance=ExtResource("8_bmxlf")]
 transform = Transform3D(1, 0, 0, 0, -0.0011385679, -0.9999994, 0, 0.9999994, -0.0011385679, -244.40892, 88.873085, -347.79074)
@@ -256,4 +268,116 @@ main = NodePath("../..")
 
 [node name="red" parent="pickups" unique_id=1190016247 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -211.35585, 61.186577, -352.85495)
+main = NodePath("../..")
+
+[node name="blue2" parent="pickups" unique_id=76817674 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.91739, 47.395893, -336.86688)
+main = NodePath("../..")
+
+[node name="green2" parent="pickups" unique_id=330014066 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.92532, 47.317593, -344.73724)
+main = NodePath("../..")
+
+[node name="red2" parent="pickups" unique_id=1169187001 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.9627, 47.338863, -352.85495)
+main = NodePath("../..")
+
+[node name="blue3" parent="pickups" unique_id=491732810 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(-0.85071975, 0, -0.52561975, 0, 1, 0, 0.52561975, 0, -0.85071975, 253.27795, 47.0268, -114.01023)
+main = NodePath("../..")
+
+[node name="green3" parent="pickups" unique_id=1571799454 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(-0.85071975, 0, -0.52561975, 0, 1, 0, 0.52561975, 0, -0.85071975, 257.408, 46.948498, -107.3106)
+main = NodePath("../..")
+
+[node name="red3" parent="pickups" unique_id=582274304 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(-0.85071975, 0, -0.52561975, 0, 1, 0, 0.52561975, 0, -0.85071975, 261.64304, 46.96977, -100.38505)
+main = NodePath("../..")
+
+[node name="blue4" parent="pickups" unique_id=1487801607 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(-0.85071975, 0, -0.52561975, 0, 1, 0, 0.52561975, 0, -0.85071975, 372.10965, 47.0268, -69.37304)
+main = NodePath("../..")
+
+[node name="green4" parent="pickups" unique_id=1752586331 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(-0.85071975, 0, -0.52561975, 0, 1, 0, 0.52561975, 0, -0.85071975, 376.2397, 46.948498, -62.67341)
+main = NodePath("../..")
+
+[node name="red4" parent="pickups" unique_id=2116047191 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(-0.85071975, 0, -0.52561975, 0, 1, 0, 0.52561975, 0, -0.85071975, 380.47473, 46.96977, -55.747856)
+main = NodePath("../..")
+
+[node name="blue5" parent="pickups" unique_id=1990654674 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(0.6391118, 0, -0.7691139, 0, 1, 0, 0.7691139, 0, 0.6391118, 358.58905, 37.210506, 165.36613)
+main = NodePath("../..")
+
+[node name="green5" parent="pickups" unique_id=580150656 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(0.6391118, 0, -0.7691139, 0, 1, 0, 0.7691139, 0, 0.6391118, 364.6473, 37.132206, 160.34224)
+main = NodePath("../..")
+
+[node name="red5" parent="pickups" unique_id=1583348762 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(0.6391118, 0, -0.7691139, 0, 1, 0, 0.7691139, 0, 0.6391118, 370.91464, 37.153477, 155.18285)
+main = NodePath("../..")
+
+[node name="blue6" parent="pickups" unique_id=868095579 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(0.6391118, 0, -0.7691139, 0, 1, 0, 0.7691139, 0, 0.6391118, 44.2484, 53.84753, -16.157976)
+main = NodePath("../..")
+
+[node name="green6" parent="pickups" unique_id=2064080409 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(0.6391118, 0, -0.7691139, 0, 1, 0, 0.7691139, 0, 0.6391118, 50.30666, 53.76923, -21.181871)
+main = NodePath("../..")
+
+[node name="red6" parent="pickups" unique_id=506951101 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(0.6391118, 0, -0.7691139, 0, 1, 0, 0.7691139, 0, 0.6391118, 56.573994, 53.7905, -26.341265)
+main = NodePath("../..")
+
+[node name="blue7" parent="pickups" unique_id=255391477 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(-0.73317957, 0, -0.6800352, 0, 1, 0, 0.6800352, 0, -0.73317957, 177.73721, 34.877842, 390.35608)
+main = NodePath("../..")
+
+[node name="green7" parent="pickups" unique_id=482027991 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(-0.73317957, 0, -0.6800352, 0, 1, 0, 0.6800352, 0, -0.73317957, 183.08348, 34.79954, 396.13184)
+main = NodePath("../..")
+
+[node name="red7" parent="pickups" unique_id=348633373 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(-0.73317957, 0, -0.6800352, 0, 1, 0, 0.6800352, 0, -0.73317957, 188.57642, 34.820812, 402.10898)
+main = NodePath("../..")
+
+[node name="blue8" parent="pickups" unique_id=1897972572 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(0.844116, 0, -0.53616077, 0, 1, 0, 0.53616077, 0, 0.844116, 52.231968, 37.726105, 384.54236)
+main = NodePath("../..")
+
+[node name="green8" parent="pickups" unique_id=1116218701 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(0.844116, 0, -0.53616077, 0, 1, 0, 0.53616077, 0, 0.844116, 56.458427, 37.647804, 377.90317)
+main = NodePath("../..")
+
+[node name="red8" parent="pickups" unique_id=1520506878 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(0.844116, 0, -0.53616077, 0, 1, 0, 0.53616077, 0, 0.844116, 60.84236, 37.669075, 371.07092)
+main = NodePath("../..")
+
+[node name="blue9" parent="pickups" unique_id=245383487 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(-0.8470899, 0, 0.53144985, 0, 1, 0, -0.53144985, 0, -0.8470899, -286.3398, 60.763145, 176.24168)
+main = NodePath("../..")
+
+[node name="green9" parent="pickups" unique_id=279570027 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(-0.8470899, 0, 0.53144985, 0, 1, 0, -0.53144985, 0, -0.8470899, -290.52924, 60.684845, 182.90431)
+main = NodePath("../..")
+
+[node name="red9" parent="pickups" unique_id=1730055924 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(-0.8470899, 0, 0.53144985, 0, 1, 0, -0.53144985, 0, -0.8470899, -294.875, 60.706116, 189.76088)
+main = NodePath("../..")
+
+[node name="green11" parent="pickups" unique_id=1572775807 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(-0.8470899, 0, 0.53144985, 0, 1, 0, -0.53144985, 0, -0.8470899, -509.29828, 72.25138, -297.6815)
+main = NodePath("../..")
+
+[node name="blue10" parent="pickups" unique_id=1386362119 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(-0.82325464, 0, -0.56767243, 0, 1, 0, 0.56767243, 0, -0.82325464, -517.34283, 72.81895, 40.063934)
+main = NodePath("../..")
+
+[node name="green10" parent="pickups" unique_id=472074414 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(-0.82325464, 0, -0.56767243, 0, 1, 0, 0.56767243, 0, -0.82325464, -512.70166, 72.74065, 45.90739)
+main = NodePath("../..")
+
+[node name="red10" parent="pickups" unique_id=209360400 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(-0.82325464, 0, -0.56767243, 0, 1, 0, 0.56767243, 0, -0.82325464, -507.31766, 72.76192, 51.576405)
 main = NodePath("../..")
