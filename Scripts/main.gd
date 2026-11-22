@@ -1,7 +1,14 @@
 extends Node3D
 
 var mat_path := "res://assets/Godot materials/Color_swap.tres"
+var path_1 := "res://assets/Godot materials/wall_red.tres" 
+var path_2 := "res://assets/Godot materials/wall_green.tres" 
+var path_3 := "res://assets/Godot materials/wall_blue.tres"
+
 var shared_mat: StandardMaterial3D
+var wall_1: StandardMaterial3D
+var wall_2: StandardMaterial3D
+var wall_3: StandardMaterial3D
 
 @export var layer1: Node3D
 @export var layer2: Node3D
@@ -17,6 +24,10 @@ const ALPHA_INACTIVE: float = 0.25
 
 func _ready() -> void:
 	shared_mat = load(mat_path) as StandardMaterial3D
+	wall_1 = load(path_1) as StandardMaterial3D
+	wall_2 = load(path_2) as StandardMaterial3D
+	wall_3 = load(path_3) as StandardMaterial3D
+	
 	if shared_mat:
 		shared_mat.albedo_color = Color.BLACK
 		
@@ -53,38 +64,47 @@ func switch_layer(new_layer: WorldLayer):
 			car.set_collision_mask_value(2, false)
 			car.set_collision_mask_value(3, false)
 			shared_mat.albedo_color = Color.RED
-			layer_transp(layer1, ALPHA_ACTIVE)
-			layer_transp(layer2, ALPHA_INACTIVE)
-			layer_transp(layer3, ALPHA_INACTIVE)
+			wall_1.albedo_color.a = ALPHA_ACTIVE
+			wall_2.albedo_color.a = ALPHA_INACTIVE
+			wall_3.albedo_color.a = ALPHA_INACTIVE
+			#layer_transp(layer1, ALPHA_ACTIVE)
+			#layer_transp(layer2, ALPHA_INACTIVE)
+			#layer_transp(layer3, ALPHA_INACTIVE)
 			
 		WorldLayer.LAYER_2:
 			car.set_collision_mask_value(1, false)
 			car.set_collision_mask_value(2, true)
 			car.set_collision_mask_value(3, false)
 			shared_mat.albedo_color = Color.GREEN
-			layer_transp(layer1, ALPHA_INACTIVE)
-			layer_transp(layer2, ALPHA_ACTIVE)
-			layer_transp(layer3, ALPHA_INACTIVE)
+			wall_1.albedo_color.a = ALPHA_INACTIVE
+			wall_2.albedo_color.a = ALPHA_ACTIVE
+			wall_3.albedo_color.a = ALPHA_INACTIVE
+			#layer_transp(layer1, ALPHA_INACTIVE)
+			#layer_transp(layer2, ALPHA_ACTIVE)
+			#layer_transp(layer3, ALPHA_INACTIVE)
 			
 		WorldLayer.LAYER_3:
 			car.set_collision_mask_value(1, false)
 			car.set_collision_mask_value(2, false)
 			car.set_collision_mask_value(3, true)
 			shared_mat.albedo_color = Color.BLUE
-			layer_transp(layer1, ALPHA_INACTIVE)
-			layer_transp(layer2, ALPHA_INACTIVE)
-			layer_transp(layer3, ALPHA_ACTIVE)
-	
-func layer_transp(test: Node3D, alpha_v:float):
-	if not test:
-		return
-	
-	for child in test.get_children():
-		if child is CSGShape3D:
-			
-			child.material = child.material.duplicate()
-			var mat = child.material as StandardMaterial3D
-			if mat:
-				var cur_color = mat.albedo_color
-				cur_color.a = alpha_v
-				mat.albedo_color = cur_color
+			wall_1.albedo_color.a = ALPHA_INACTIVE
+			wall_2.albedo_color.a = ALPHA_INACTIVE
+			wall_3.albedo_color.a = ALPHA_ACTIVE
+			#layer_transp(layer1, ALPHA_INACTIVE)
+			#layer_transp(layer2, ALPHA_INACTIVE)
+			#layer_transp(layer3, ALPHA_ACTIVE)
+	#
+#func layer_transp(test: Node3D, alpha_v:float):
+	#if not test:
+		#return
+	#
+	#for child in test.get_children():
+		#if child is CSGShape3D:
+			#
+			#child.material = child.material.duplicate()
+			#var mat = child.material as StandardMaterial3D
+			#if mat:
+				#var cur_color = mat.albedo_color
+				#cur_color.a = alpha_v
+				#mat.albedo_color = cur_color
