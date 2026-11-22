@@ -4,12 +4,7 @@
 [ext_resource type="Script" uid="uid://coo2gg151tsr3" path="res://Menu/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_0ic5h"]
 [ext_resource type="PackedScene" uid="uid://2qwvdfambjkc" path="res://Menu/scenes/windows/main_menu_options_window.tscn" id="3_wi2rp"]
 [ext_resource type="PackedScene" uid="uid://dy7lxqbnk5a1d" path="res://Menu/scenes/windows/main_menu_credits_window.tscn" id="4_utvf7"]
-<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://df8wswf00e2nd" path="res://Scenes/Menu/menu_background.tscn" id="5_0ic5h"]
-=======
-[ext_resource type="PackedScene" uid="uid://df8wswf00e2nd" path="res://Scenes/menu_background.tscn" id="5_0ic5h"]
-[ext_resource type="Shader" uid="uid://dsldxfmaadktq" path="res://Scripts/crt_tv_effect.gdshader" id="5_wi2rp"]
->>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -295,38 +290,12 @@ states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
 graph_offset = Vector2(-180.277, 49)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1tdef"]
-shader = ExtResource("5_wi2rp")
-shader_parameter/wave_speed = 0.50000002049012
-shader_parameter/wave_width = 0.15000000549505998
-shader_parameter/max_scale = 1.0150000007125
-shader_parameter/pause_duration = 0.6
-
 [sub_resource type="LabelSettings" id="LabelSettings_ls5x7"]
 line_spacing = 3.08
 font_size = 42
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 0
-stacked_outline_count = 3
-stacked_outline_0/size = 5
-stacked_outline_0/color = Color(1, 0, 0, 1)
-stacked_outline_1/size = 5
-stacked_outline_1/color = Color(0, 1, 0, 1)
-stacked_outline_2/size = 5
-stacked_outline_2/color = Color(0, 0, 1, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_utvf7"]
-shader = ExtResource("5_wi2rp")
-shader_parameter/wave_speed = 0.50000002049012
-shader_parameter/wave_width = 0.15000000549505998
-shader_parameter/max_scale = 1.0150000007125
-shader_parameter/pause_duration = 0.6
-
-[sub_resource type="LabelSettings" id="LabelSettings_hbo8y"]
-font_size = 20
-outline_size = 10
-outline_color = Color(0, 0, 0, 1)
 stacked_outline_count = 3
 stacked_outline_0/size = 5
 stacked_outline_0/color = Color(1, 0, 0, 1)
@@ -359,31 +328,23 @@ z_index = 1
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
-material = SubResource("ShaderMaterial_1tdef")
-offset_left = -56.0
-offset_top = 9.000004
-offset_right = -412.0
-offset_bottom = 97.0
-rotation = -0.1040241
-text = "RGB"
+offset_left = 12.0
+offset_top = 36.0
+offset_right = -344.0
+offset_bottom = 124.0
+rotation = -0.09932841
+text = "Onion Racer"
 label_settings = SubResource("LabelSettings_ls5x7")
 auto_update = false
 
-[node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
+[node name="SubTitleMargin" parent="MenuContainer" index="1" unique_id=893436372]
+visible = false
+
+[node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
-material = SubResource("ShaderMaterial_utvf7")
-anchors_preset = -1
-anchor_left = 0.007
-anchor_bottom = 0.087000005
-offset_left = 43.52
-offset_top = 20.0
-offset_right = -311.3756
-offset_bottom = 14.2439995
-rotation = -0.10588375
-text = "Redline. Greenlight. Boost!"
-label_settings = SubResource("LabelSettings_hbo8y")
+text = "Testing menus"
 
 [node name="MenuButtonsContainer" parent="MenuContainer/MenuButtonsMargin" parent_id_path=PackedInt32Array(1532800992) index="0" unique_id=580041505]
 modulate = Color(1, 1, 1, 0)
