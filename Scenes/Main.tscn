@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bflkgb8q4ab2k"]
 
 [ext_resource type="PackedScene" uid="uid://cv0acp52ynffg" path="res://car/golfik.tscn" id="1_glv2v"]
-[ext_resource type="PackedScene" uid="uid://tki5ufo0drra" path="res://map.tscn" id="2_cm0pq"]
+[ext_resource type="PackedScene" uid="uid://tki5ufo0drra" path="res://Scenes/map.tscn" id="2_cm0pq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu6xs"]
 transparency = 1
