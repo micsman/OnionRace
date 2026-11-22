@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://bflkgb8q4ab2k"]
 
 [ext_resource type="PackedScene" uid="uid://cv0acp52ynffg" path="res://Scenes/Objects/car/golfik.tscn" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://cdttwjra5rdgr" path="res://Scripts/main.gd" id="1_kln2b"]
 [ext_resource type="PackedScene" uid="uid://tki5ufo0drra" path="res://Scenes/Objects/map.tscn" id="2_idj7w"]
+[ext_resource type="PackedScene" uid="uid://cypnww4h7rp6u" path="res://assets/blue_bucket.tscn" id="4_v1gob"]
+[ext_resource type="PackedScene" uid="uid://68uo4fxf2auo" path="res://assets/green_bucket.tscn" id="5_jw32o"]
+[ext_resource type="PackedScene" uid="uid://b31biob6381yy" path="res://assets/red_bucket.tscn" id="6_50glp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu6xs"]
 transparency = 1
@@ -12,7 +16,12 @@ transparency = 1
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cm0pq"]
 transparency = 1
 
-[node name="Main" type="Node3D" unique_id=1897321323]
+[node name="Main" type="Node3D" unique_id=1897321323 node_paths=PackedStringArray("layer1", "layer2", "layer3", "car")]
+script = ExtResource("1_kln2b")
+layer1 = NodePath("SubViewportContainer/SubViewport/Layer1")
+layer2 = NodePath("SubViewportContainer/SubViewport/Layer2")
+layer3 = NodePath("SubViewportContainer/SubViewport/Layer3")
+car = NodePath("SubViewportContainer/SubViewport/golfik")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=1476207875]
 anchors_preset = 15
@@ -37,12 +46,9 @@ render_target_update_mode = 4
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 light_specular = 0.5
 
-[node name="golfik" parent="SubViewportContainer/SubViewport" unique_id=1977507205 node_paths=PackedStringArray("layer1", "layer2", "layer3") instance=ExtResource("1_glv2v")]
+[node name="golfik" parent="SubViewportContainer/SubViewport" unique_id=1977507205 instance=ExtResource("1_glv2v")]
 transform = Transform3D(-0.99908483, 0.042769853, -8.7342784e-08, 0.04276985, 0.99908495, 3.7390593e-09, 8.742277e-08, 0, -1, -225.21198, 62.621128, -345.44254)
-steer = 0.5
-layer1 = NodePath("../Layer1")
-layer2 = NodePath("../Layer2")
-layer3 = NodePath("../Layer3")
+steer = 0.9
 
 [node name="LevelGroup" type="Node" parent="SubViewportContainer/SubViewport" unique_id=821082657]
 
@@ -76,3 +82,17 @@ collision_layer = 4
 collision_mask = 4
 size = Vector3(13.899658, 6.524536, 1)
 material = SubResource("StandardMaterial3D_cm0pq")
+
+[node name="pickups" type="Node" parent="." unique_id=254165140]
+
+[node name="blue" parent="pickups" unique_id=252223866 node_paths=PackedStringArray("main") instance=ExtResource("4_v1gob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -211.40115, 61.243607, -336.86688)
+main = NodePath("../..")
+
+[node name="green" parent="pickups" unique_id=761851796 node_paths=PackedStringArray("main") instance=ExtResource("5_jw32o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -211.39322, 61.165306, -344.73724)
+main = NodePath("../..")
+
+[node name="red" parent="pickups" unique_id=1190016247 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -211.35585, 61.186577, -352.85495)
+main = NodePath("../..")

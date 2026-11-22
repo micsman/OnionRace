@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dmo7vj4lkio4u" path="res://Scenes/Objects/car/golfik.gd" id="1_wunr3"]
 [ext_resource type="Texture2D" uid="uid://dbxmm2sxetrhj" path="res://assets/golfik_golfik.png" id="2_2s56o"]
 [ext_resource type="Script" uid="uid://dwujxvrw3v7fp" path="res://Scripts/follow_camera.gd" id="3_2s56o"]
+[ext_resource type="Material" uid="uid://cj4v51ahi3ocy" path="res://assets/Godot materials/Color_swap.tres" id="4_748xj"]
 [ext_resource type="PackedScene" uid="uid://dqvd5v3vp3fhq" path="res://Scenes/Objects/Decorations/gradient_lights.tscn" id="4_xl51i"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fh0uv"]
@@ -363,6 +364,7 @@ mesh = SubResource("ArrayMesh_0mkq6")
 
 [node name="body backface" type="MeshInstance3D" parent="body" unique_id=1141682068]
 mesh = SubResource("ArrayMesh_fartf")
+surface_material_override/0 = ExtResource("4_748xj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=304166247]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009002686, -0.043631554, -0.0289917)

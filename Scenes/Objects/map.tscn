@@ -1,6 +1,26 @@
 [gd_scene format=3 uid="uid://tki5ufo0drra"]
 
 [ext_resource type="PackedScene" uid="uid://cplxlawbqo4ke" path="res://assets/Blender/map.glb" id="1_c7s6e"]
+[ext_resource type="Material" uid="uid://cj4v51ahi3ocy" path="res://assets/Godot materials/Color_swap.tres" id="2_c67h1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pbw6q"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rgh2o"]
+noise = SubResource("FastNoiseLite_pbw6q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kln2b"]
+albedo_texture = SubResource("NoiseTexture2D_rgh2o")
 
 [node name="map" unique_id=180817755 instance=ExtResource("1_c7s6e")]
 transform = Transform3D(25, 0, 0, 0, 25, 0, 0, 0, 25, 0, 0, 0)
+
+[node name="decorations" parent="." index="0" unique_id=849232618]
+surface_material_override/0 = ExtResource("2_c67h1")
+surface_material_override/1 = ExtResource("2_c67h1")
+
+[node name="terrain" parent="." index="2" unique_id=844675961]
+surface_material_override/0 = SubResource("StandardMaterial3D_kln2b")
+surface_material_override/1 = ExtResource("2_c67h1")
+
+[node name="terrain_backface" parent="." index="3" unique_id=344868640]
+surface_material_override/0 = ExtResource("2_c67h1")
