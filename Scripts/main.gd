@@ -38,11 +38,11 @@ func _ready() -> void:
 
 func _on_send_layer(set_layer: int) -> void:
 	if set_layer == 1:
-		switch_layer(0)
+		switch_layer(WorldLayer.LAYER_1)
 	if set_layer == 2:
-		switch_layer(1)
+		switch_layer(WorldLayer.LAYER_2)
 	if set_layer == 3:
-		switch_layer(2)
+		switch_layer(WorldLayer.LAYER_3)
 	
 
 #func _input(event: InputEvent) -> void:
@@ -110,5 +110,5 @@ func switch_layer(new_layer: WorldLayer):
 				#mat.albedo_color = cur_color
 
 
-func _on_deathzone_body_entered(body: Node3D) -> void:
+func _on_deathzone_body_entered(_body: Node3D) -> void:
 	get_tree().call_deferred("reload_current_scene")

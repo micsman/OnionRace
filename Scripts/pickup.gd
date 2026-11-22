@@ -27,17 +27,17 @@ func start_floating() -> void:
 	
 
 
-func _on_red(body: Node3D) -> void:
+func _on_red(_body: Node3D) -> void:
 	send_layer.emit(1)
 	queue_free()
 	self.hide()
 	
-func _on_green(body: Node3D) -> void:
+func _on_green(_body: Node3D) -> void:
 	send_layer.emit(2)
 	queue_free()
 	self.hide()
 	
-func _on_blue(body: Node3D) -> void:
+func _on_blue(_body: Node3D) -> void:
 	send_layer.emit(3)
 	queue_free()
 	self.hide()
