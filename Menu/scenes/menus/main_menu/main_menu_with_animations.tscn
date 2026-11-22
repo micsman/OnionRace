@@ -300,7 +300,7 @@ shader_parameter/pause_duration = 0.6
 
 [sub_resource type="LabelSettings" id="LabelSettings_ls5x7"]
 line_spacing = 3.08
-font_size = 42
+font_size = 72
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 shadow_size = 0
@@ -320,7 +320,7 @@ shader_parameter/max_scale = 1.0150000007125
 shader_parameter/pause_duration = 0.6
 
 [sub_resource type="LabelSettings" id="LabelSettings_wpel8"]
-font_size = 20
+font_size = 32
 outline_size = 10
 outline_color = Color(0, 0, 0, 1)
 stacked_outline_count = 3
@@ -356,10 +356,10 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
 material = SubResource("ShaderMaterial_0g2w4")
-offset_left = -56.000004
-offset_top = 15.0
-offset_right = -412.0
-offset_bottom = 103.0
+offset_left = -193.0
+offset_top = 77.164795
+offset_right = -549.0
+offset_bottom = 165.1648
 rotation = -0.11857515
 text = "RGB"
 label_settings = SubResource("LabelSettings_ls5x7")
@@ -370,10 +370,10 @@ modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
 material = SubResource("ShaderMaterial_gq5f8")
-offset_left = -138.0
-offset_top = 38.0
-offset_right = -138.0
-offset_bottom = 72.0
+offset_left = -226.0
+offset_top = 123.0
+offset_right = -226.0
+offset_bottom = 168.0
 rotation = -0.12100587
 text = "Redline. Greenlight. Boost!"
 label_settings = SubResource("LabelSettings_wpel8")
@@ -382,9 +382,10 @@ label_settings = SubResource("LabelSettings_wpel8")
 modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0" unique_id=1691719897]
-offset_left = 40.0
+offset_left = 124.0
 offset_top = -136.0
-offset_right = 208.0
+offset_right = 440.0
+offset_bottom = 167.0
 lock = true
 
 [node name="VersionMargin" parent="." index="5" unique_id=115503069]
