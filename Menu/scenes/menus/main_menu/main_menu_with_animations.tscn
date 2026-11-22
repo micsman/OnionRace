@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://coo2gg151tsr3" path="res://Menu/scenes/menus/main_menu/main_menu_with_animations.gd" id="2_0ic5h"]
 [ext_resource type="PackedScene" uid="uid://2qwvdfambjkc" path="res://Menu/scenes/windows/main_menu_options_window.tscn" id="3_wi2rp"]
 [ext_resource type="PackedScene" uid="uid://dy7lxqbnk5a1d" path="res://Menu/scenes/windows/main_menu_credits_window.tscn" id="4_utvf7"]
+[ext_resource type="PackedScene" uid="uid://df8wswf00e2nd" path="res://Scenes/menu_background.tscn" id="5_0ic5h"]
 
 [sub_resource type="Animation" id="1"]
 resource_name = "Intro"
@@ -289,8 +290,23 @@ states/Start/position = Vector2(82, 123)
 transitions = ["Intro", "OpenMainMenu", SubResource("11"), "OpenMainMenu", "OpenSubMenu", SubResource("14"), "Start", "Intro", SubResource("AnimationNodeStateMachineTransition_j0orr"), "OpenSubMenu", "OpenMainMenu", SubResource("AnimationNodeStateMachineTransition_63dxc")]
 graph_offset = Vector2(-180.277, 49)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ls5x7"]
+line_spacing = 3.08
+font_size = 42
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+stacked_outline_count = 3
+stacked_outline_0/size = 5
+stacked_outline_0/color = Color(1, 0, 0, 1)
+stacked_outline_1/size = 5
+stacked_outline_1/color = Color(0, 1, 0, 1)
+stacked_outline_2/size = 5
+stacked_outline_2/color = Color(0, 0, 1, 1)
+
 [node name="MainMenu" unique_id=2084566378 instance=ExtResource("1_s4hg3")]
 script = ExtResource("2_0ic5h")
+game_scene_path = "uid://bflkgb8q4ab2k"
 options_packed_scene = ExtResource("3_wi2rp")
 credits_packed_scene = ExtResource("4_utvf7")
 
@@ -305,14 +321,26 @@ tree_root = SubResource("AnimationNodeStateMachine_vikuh")
 anim_player = NodePath("../MenuAnimationPlayer")
 parameters/conditions/intro_done = false
 
+[node name="MenuContainer" parent="." index="4" unique_id=785053879]
+z_index = 1
+
 [node name="TitleContainer" parent="MenuContainer/TitleMargin" parent_id_path=PackedInt32Array(1189822984) index="0" unique_id=704939549]
 modulate = Color(1, 1, 1, 0)
 
 [node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0" unique_id=334107926]
-text = "Onion Race"
+offset_left = 12.0
+offset_top = 36.0
+offset_right = -344.0
+offset_bottom = 124.0
+rotation = -0.09932841
+text = "Onion Racer"
+label_settings = SubResource("LabelSettings_ls5x7")
 auto_update = false
 
-[node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" parent_id_path=PackedInt32Array(893436372) index="0" unique_id=523889664]
+[node name="SubTitleMargin" parent="MenuContainer" index="1" unique_id=893436372]
+visible = false
+
+[node name="SubTitleContainer" parent="MenuContainer/SubTitleMargin" index="0" unique_id=523889664]
 modulate = Color(1, 1, 1, 0)
 
 [node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0" unique_id=754291424]
@@ -322,9 +350,15 @@ text = "Testing menus"
 modulate = Color(1, 1, 1, 0)
 
 [node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0" unique_id=1691719897]
+offset_left = 40.0
+offset_top = -136.0
+offset_right = 208.0
 lock = true
 
-[node name="VersionContainer" parent="VersionMargin" parent_id_path=PackedInt32Array(115503069) index="0" unique_id=645412385]
+[node name="VersionMargin" parent="." index="5" unique_id=115503069]
+visible = false
+
+[node name="VersionContainer" parent="VersionMargin" index="0" unique_id=645412385]
 modulate = Color(1, 1, 1, 0)
 
 [node name="MouseFilter" type="Control" parent="." index="6" unique_id=26695112]
@@ -336,3 +370,5 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 metadata/_edit_lock_ = true
+
+[node name="Node3D" parent="." index="8" unique_id=85551742 instance=ExtResource("5_0ic5h")]
