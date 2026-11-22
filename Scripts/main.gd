@@ -108,3 +108,7 @@ func switch_layer(new_layer: WorldLayer):
 				#var cur_color = mat.albedo_color
 				#cur_color.a = alpha_v
 				#mat.albedo_color = cur_color
+
+
+func _on_deathzone_body_entered(body: Node3D) -> void:
+	get_tree().call_deferred("reload_current_scene")

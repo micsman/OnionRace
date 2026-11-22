@@ -9,6 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://htg5f7tqpuh" path="res://assets/Blender/obstacle1.glb" id="7_vy5pj"]
 [ext_resource type="PackedScene" uid="uid://bg2c6dmxdv7ix" path="res://assets/Blender/obstacle2.glb" id="8_bmxlf"]
 [ext_resource type="PackedScene" uid="uid://bexjpvd4uuva6" path="res://assets/Blender/obstacle3.glb" id="9_4kpch"]
+[ext_resource type="Script" uid="uid://d0ovkco1h3x33" path="res://Scripts/pause_menu_controller.gd" id="10_bmxlf"]
+[ext_resource type="PackedScene" uid="uid://bqtjjecvmcwdy" path="res://Menu/scenes/windows/pause_menu.tscn" id="11_4kpch"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(2317.4866, 17.197166, 1870.1924)
 
 [node name="Main" type="Node3D" unique_id=1897321323 node_paths=PackedStringArray("layer1", "layer2", "layer3", "car")]
 script = ExtResource("1_kln2b")
@@ -381,3 +386,18 @@ main = NodePath("../..")
 [node name="red10" parent="pickups" unique_id=209360400 node_paths=PackedStringArray("main") instance=ExtResource("6_50glp")]
 transform = Transform3D(-0.82325464, 0, -0.56767243, 0, 1, 0, 0.56767243, 0, -0.82325464, -507.31766, 72.76192, 51.576405)
 main = NodePath("../..")
+
+[node name="Deathzone" type="Area3D" parent="." unique_id=1412126288]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Deathzone" unique_id=785169784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.495556, -181.17188)
+shape = SubResource("BoxShape3D_g4v7s")
+debug_color = Color(0.99215686, 0.38039216, 1, 1)
+
+[node name="Menu" type="Node" parent="." unique_id=1841117106]
+
+[node name="PauseMenu" type="Node" parent="Menu" unique_id=1060704211]
+script = ExtResource("10_bmxlf")
+pause_menu_packed = ExtResource("11_4kpch")
+
+[connection signal="body_entered" from="Deathzone" to="." method="_on_deathzone_body_entered"]
