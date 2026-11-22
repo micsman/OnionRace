@@ -6,15 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cypnww4h7rp6u" path="res://assets/blue_bucket.tscn" id="4_v1gob"]
 [ext_resource type="PackedScene" uid="uid://68uo4fxf2auo" path="res://assets/green_bucket.tscn" id="5_jw32o"]
 [ext_resource type="PackedScene" uid="uid://b31biob6381yy" path="res://assets/red_bucket.tscn" id="6_50glp"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uu6xs"]
-transparency = 1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0du0"]
-transparency = 1
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cm0pq"]
-transparency = 1
+[ext_resource type="PackedScene" uid="uid://htg5f7tqpuh" path="res://assets/Blender/obstacle1.glb" id="7_vy5pj"]
+[ext_resource type="PackedScene" uid="uid://bg2c6dmxdv7ix" path="res://assets/Blender/obstacle2.glb" id="8_bmxlf"]
+[ext_resource type="PackedScene" uid="uid://bexjpvd4uuva6" path="res://assets/Blender/obstacle3.glb" id="9_4kpch"]
 
 [node name="Main" type="Node3D" unique_id=1897321323 node_paths=PackedStringArray("layer1", "layer2", "layer3", "car")]
 script = ExtResource("1_kln2b")
@@ -56,32 +50,199 @@ steer = 0.9
 
 [node name="Layer1" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=69541661]
 
-[node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer1" unique_id=37810338]
-transform = Transform3D(0.5707876, 0, 0.82109773, 0, 1, 0, -0.82109773, 0, 0.5707876, -129.83136, 59.64682, -336.51212)
-use_collision = true
-size = Vector3(8.918457, 6.524536, 1)
-material = SubResource("StandardMaterial3D_uu6xs")
+[node name="obstacle12" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1971699589 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -177.28668, 63.393696, -349.45926)
+
+[node name="obstacle32" parent="SubViewportContainer/SubViewport/Layer1" unique_id=844222593 instance=ExtResource("9_4kpch")]
+transform = Transform3D(0.98925424, 0, 0.14620538, 0, 1, 0, -0.14620538, 0, 0.98925424, 236.90251, 52.45382, -97.80857)
+
+[node name="obstacle22" parent="SubViewportContainer/SubViewport/Layer1" unique_id=242222359 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(-0.06895614, 0, -0.9976197, 0, 1, 0, 0.9976197, 0, -0.06895614, 226.9009, 49.996807, -227.9673)
+
+[node name="obstacle14" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1542036692 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.28055215, 0, 0.9598388, 0, 1, 0, -0.9598388, 0, 0.28055215, 25.962343, 58.59337, -35.676968)
+
+[node name="obstacle18" parent="SubViewportContainer/SubViewport/Layer1" unique_id=2058693914 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.822339, 45.248177, 347.07217)
+
+[node name="obstacle26" parent="SubViewportContainer/SubViewport/Layer1" unique_id=108378348 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.57078797, 0, -0.8210975, 0, 1, 0, 0.8210975, 0, 0.57078797, -5.3108873, 44.872223, 334.99316)
+
+[node name="obstacle19" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1837387226 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.9597215, 0, -0.28095308, 0, 1, 0, 0.28095308, 0, 0.9597215, 36.40907, 42.473076, 359.31256)
+
+[node name="obstacle20" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1905342299 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.9559794, 0, -0.29343376, 0, 1, 0, 0.29343376, 0, 0.9559794, -194.6835, 57.003998, 243.1056)
+
+[node name="obstacle39" parent="SubViewportContainer/SubViewport/Layer1" unique_id=329982967 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(-0.036093425, 0, -0.9993484, 0, 1, 0, 0.9993484, 0, -0.036093425, -545.936, 74.97764, -105.63129)
+
+[node name="obstacle42" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1187761977 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.45714644, 0, 0.8893914, 0, 1, 0, -0.8893914, 0, 0.45714644, -508.23798, 74.99678, -308.17383)
+
+[node name="obstacle45" parent="SubViewportContainer/SubViewport/Layer1" unique_id=167517096 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 0.8685488, 0.49560365, 0, -0.49560365, 0.8685488, -243.5907, 65.5436, -326.52975)
+
+[node name="obstacle48" parent="SubViewportContainer/SubViewport/Layer1" unique_id=426882879 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -245.87306, 95.78553, -361.15118)
+
+[node name="obstacle50" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1061521922 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247.7205, 102.50519, -343.47803)
+
+[node name="obstacle51" parent="SubViewportContainer/SubViewport/Layer1" unique_id=256524366 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, -0.99930906, 0.03716772, 0, -0.03716772, -0.99930906, -244.29398, 66.31286, -350.49072)
+
+[node name="obstacle52" parent="SubViewportContainer/SubViewport/Layer1" unique_id=310318528 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, -0.08495133, -0.9963851, 0, 0.9963851, -0.08495133, -243.61948, 70.71239, -337.6146)
+
+[node name="obstacle13" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1823499674 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.182884, 56.87057, -349.189)
+
+[node name="obstacle33" parent="SubViewportContainer/SubViewport/Layer1" unique_id=1439099116 instance=ExtResource("9_4kpch")]
+transform = Transform3D(0.93558, 0, -0.35311478, 0, 1, 0, 0.35311478, 0, 0.93558, 374.07666, 38.852253, -232.59953)
+
+[node name="obstacle15" parent="SubViewportContainer/SubViewport/Layer1" unique_id=356036472 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.13142644, 0, -0.9913259, 0, 1, 0, 0.9913259, 0, 0.13142644, 564.32355, 24.97765, -36.744404)
+
+[node name="obstacle24" parent="SubViewportContainer/SubViewport/Layer1" unique_id=922141418 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.16290146, 0, -0.98664236, 0, 1, 0, 0.98664236, 0, 0.16290146, 583.4936, 24.996763, 23.682695)
+
+[node name="obstacle27" parent="SubViewportContainer/SubViewport/Layer1" unique_id=2133399668 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(-0.53975976, 0, -0.8418191, 0, 1, 0, 0.8418191, 0, -0.53975976, 315.81, 49.996807, -10.432903)
+
+[node name="obstacle28" parent="SubViewportContainer/SubViewport/Layer1" unique_id=646400420 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.9759178, 0, 0.21813841, 0, 1, 0, -0.21813841, 0, 0.9759178, 425.83102, 49.996822, -79.909546)
+
+[node name="obstacle29" parent="SubViewportContainer/SubViewport/Layer1" unique_id=443969658 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 365.7353, 49.9968, -153.03613)
 
 [node name="Layer2" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1333433397]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12.707375, 0)
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer2" unique_id=397180340]
-transform = Transform3D(-0.16615608, 0, 0.9860995, 0, 1, 0, -0.9860995, 0, -0.16615608, -85.87485, 70.1821, -336.175)
-use_collision = true
-collision_layer = 2
-collision_mask = 2
-size = Vector3(8.918457, 6.524536, 1)
-material = SubResource("StandardMaterial3D_r0du0")
+[node name="obstacle22" parent="SubViewportContainer/SubViewport/Layer2" unique_id=1020460828 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -141.83467, 74.55864, -338.2817)
+
+[node name="obstacle49" parent="SubViewportContainer/SubViewport/Layer2" unique_id=1401317174 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 0.9769135, -0.21363528, 0, 0.21363528, 0.9769135, -245.06184, 110.342224, -328.29895)
 
 [node name="Layer3" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=231094992]
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Layer3" unique_id=827464282]
-transform = Transform3D(-0.28879204, 0, 0.957392, 0, 1, 0, -0.957392, 0, -0.28879204, -30.915909, 54.983307, -349.61786)
-use_collision = true
-collision_layer = 4
-collision_mask = 4
-size = Vector3(13.899658, 6.524536, 1)
-material = SubResource("StandardMaterial3D_cm0pq")
+[node name="obstacle32" parent="SubViewportContainer/SubViewport/Layer3" unique_id=103367910 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -106.806244, 62.767693, -338.56296)
+
+[node name="obstacle33" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1389775494 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.53512, 61.076187, -46.492012)
+
+[node name="obstacle15" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1211621308 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.14888558, 0, 0.9888544, 0, 1, 0, -0.9888544, 0, 0.14888558, 67.16571, 55.38398, -12.9505625)
+
+[node name="obstacle16" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1833001427 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.27520743, 0, 0.9613849, 0, 1, 0, -0.9613849, 0, 0.27520743, 91.013054, 51.895485, 29.207283)
+
+[node name="obstacle34" parent="SubViewportContainer/SubViewport/Layer3" unique_id=767424779 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 101.33105, 53.490234, 40.625237)
+
+[node name="obstacle17" parent="SubViewportContainer/SubViewport/Layer3" unique_id=288167219 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.694299, 0, -0.7196867, 0, 1, 0, 0.7196867, 0, 0.694299, 198.63625, 40.4248, 150.25317)
+
+[node name="obstacle35" parent="SubViewportContainer/SubViewport/Layer3" unique_id=2109990330 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.87375, 39.953796, 399.56458)
+
+[node name="obstacle27" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1319704916 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.9349573, 0, -0.35476026, 0, 1, 0, 0.35476026, 0, 0.9349573, 69.303535, 40.007202, 392.4871)
+
+[node name="obstacle28" parent="SubViewportContainer/SubViewport/Layer3" unique_id=572297758 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.94099414, 0, -0.33842292, 0, 1, 0, 0.33842292, 0, 0.94099414, -247.15532, 58.62194, 201.7655)
+
+[node name="obstacle29" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1978685456 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.84744686, 0, -0.5308802, 0, 1, 0, 0.5308802, 0, 0.84744686, -296.88354, 64.02505, 171.6866)
+
+[node name="obstacle21" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1737378135 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -344.21658, 66.6254, 160.1093)
+
+[node name="obstacle36" parent="SubViewportContainer/SubViewport/Layer3" unique_id=846642231 instance=ExtResource("9_4kpch")]
+transform = Transform3D(0.5943856, 0, -0.80418015, 0, 1, 0, 0.80418015, 0, 0.5943856, -338.744, 69.37481, 147.56326)
+
+[node name="obstacle30" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1770000666 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -522.87164, 74.97764, 29.948364)
+
+[node name="obstacle31" parent="SubViewportContainer/SubViewport/Layer3" unique_id=32463288 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.60885745, 0, 0.79327965, 0, 1, 0, -0.79327965, 0, 0.60885745, -531.15686, 74.99678, 17.338448)
+
+[node name="obstacle37" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1561873894 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -536.3927, 74.97765, 2.9157486)
+
+[node name="obstacle44" parent="SubViewportContainer/SubViewport/Layer3" unique_id=400794631 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 0.8722083, -0.48913467, 0, 0.48913467, 0.8722083, -244.61673, 65.57681, -365.78265)
+
+[node name="obstacle46" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1930948935 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, -0.03468037, 0.99939847, 0, -0.99939847, -0.03468037, -243.50835, 83.34385, -319.92596)
+
+[node name="obstacle47" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1820864414 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 0.08627828, -0.9962711, 0, 0.9962711, 0.08627828, -245.8617, 82.28559, -371.223)
+
+[node name="obstacle54" parent="SubViewportContainer/SubViewport/Layer3" unique_id=189290246 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, -0.8272151, 0.5618854, 0, -0.5618854, -0.8272151, -245.97374, 85.18914, -334.60687)
+
+[node name="obstacle12" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1140118951 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.9261248, 0, 0.3772172, 0, 1, 0, -0.3772172, 0, 0.9261248, 243.1664, 49.977657, -91.959305)
+
+[node name="obstacle13" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1905343501 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.6355864, 0, -0.77202976, 0, 1, 0, 0.77202976, 0, 0.6355864, 173.69124, 49.97768, -113.52217)
+
+[node name="obstacle23" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1851905967 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.296062, 55.522316, -4.1546526)
+
+[node name="obstacle24" parent="SubViewportContainer/SubViewport/Layer3" unique_id=120453843 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 82.06244, 53.03441, 18.627516)
+
+[node name="obstacle25" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1510837781 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.34494, 37.496777, 414.70316)
+
+[node name="obstacle38" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1367943924 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.63760936, 0, 0.7703598, 0, 1, 0, -0.7703598, 0, 0.63760936, -544.1375, 74.99681, -9.900757)
+
+[node name="obstacle40" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1903761360 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.20655908, 0, 0.97843415, 0, 1, 0, -0.97843415, 0, 0.20655908, -557.5169, 74.996765, -110.97035)
+
+[node name="obstacle41" parent="SubViewportContainer/SubViewport/Layer3" unique_id=509626591 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.5741478, 0, 0.8187517, 0, 1, 0, -0.8187517, 0, 0.5741478, -484.09854, 74.97765, -208.92831)
+
+[node name="obstacle43" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1724308472 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -426.99594, 76.81301, -352.83127)
+
+[node name="obstacle53" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1987668819 instance=ExtResource("9_4kpch")]
+transform = Transform3D(1, 0, 0, 0, 0.7788635, 0.6271937, 0, -0.6271937, 0.7788635, -245.34195, 78.72066, -358.32666)
+
+[node name="obstacle55" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1067963518 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, -0.0011385679, -0.9999994, 0, 0.9999994, -0.0011385679, -244.40892, 88.873085, -347.79074)
+
+[node name="obstacle39" parent="SubViewportContainer/SubViewport/Layer3" unique_id=807805884 instance=ExtResource("9_4kpch")]
+transform = Transform3D(0.17065635, 0, -0.9853306, 0, 1, 0, 0.9853306, 0, 0.17065635, 567.6757, 27.453796, 97.0676)
+
+[node name="obstacle26" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1881456016 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(0.5691358, 0, -0.8222435, 0, 1, 0, 0.8222435, 0, 0.5691358, 358.0011, 43.076027, 141.96202)
+
+[node name="obstacle18" parent="SubViewportContainer/SubViewport/Layer3" unique_id=670579247 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.5082377, 0, -0.86121684, 0, 1, 0, 0.86121684, 0, 0.5082377, 299.00253, 49.977673, 89.055305)
+
+[node name="obstacle42" parent="SubViewportContainer/SubViewport/Layer3" unique_id=2018758284 instance=ExtResource("9_4kpch")]
+transform = Transform3D(0.9243505, 0, 0.3815445, 0, 1, 0, -0.3815445, 0, 0.9243505, 385.50342, 52.453827, -75.48482)
+
+[node name="obstacle45" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1106720739 instance=ExtResource("8_bmxlf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 89.40207, 51.77439, -349.86813)
+
+[node name="obstacle19" parent="SubViewportContainer/SubViewport/Layer3" unique_id=320252215 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 484.1585, 24.97765, 258.33646)
+
+[node name="obstacle48" parent="SubViewportContainer/SubViewport/Layer3" unique_id=809577708 instance=ExtResource("9_4kpch")]
+transform = Transform3D(0.63726676, 0, -0.7706433, 0, 1, 0, 0.7706433, 0, 0.63726676, 348.59378, 45.24076, 152.0974)
+
+[node name="obstacle20" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1865668514 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.975217, 0, 0.22125065, 0, 1, 0, -0.22125065, 0, 0.975217, 404.71747, 49.97768, -76.6891)
+
+[node name="obstacle22" parent="SubViewportContainer/SubViewport/Layer3" unique_id=1334133212 instance=ExtResource("7_vy5pj")]
+transform = Transform3D(0.95835954, 0, 0.28556427, 0, 1, 0, -0.28556427, 0, 0.95835954, 438.0063, 49.97768, -99.41267)
 
 [node name="pickups" type="Node" parent="." unique_id=254165140]
 
